@@ -8,4 +8,4 @@ deploy:
     secure: $HEROKU_TOKEN
   app:  "spring-book-store"
   on:
-    branch: master
+    branch: main
