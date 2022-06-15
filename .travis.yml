@@ -1,12 +1,12 @@
 language: java
 jdk:
-  - openjdk17
+- openjdk17
 before_deploy:
-  - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.8.0
+- rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.8.0
 deploy:
   provider: heroku
   api_key:
-    secure: $HEROKU_TOKEN
-  app:  "spring-book-store"
+    secure: GxqNhusCc6c+aMP0LF27X1xTUGmgBaYm90WuFsh/gtrDL+0IKZwT7eV5vcGFgtLmWA8Desa9m5GmYv321b9gp63awx2OvdpBU0UqYx03wyNx18AOzMs41DU5Umw1j+nrKS5Ts30JXXzjI/GT7lJ5DJxxz/KcOJTd9tCn2rJOwH4t6gEW3oSRcEHY9Pc2lEONl1c8ie7B+S/uYb6O8Rkdt/TNwDR7WMha+I4gk77/UE//h5NJ2DpjIK0BLYAEngezTPtG3DE4O4M45+y+xAaPrA7LDDU0OAmXTw1ited+cdujdDdcy/4urJfGu/ZtkUwqQ2T37qGJw+0oEr5GM7hf0d7fBwU5dHvDRgpPnm/PrnqAsvcVUcY/Mi6UiS5tSyCASFAp1WaoDhD2PNPQ8y7gXJszZOmd7wCdhvx//R9GP8/Hf6P7pT7jn23hwmgc8kvLEe60cyVAhcxZI37TEw4tIPYp9yf8nDCneZXN40QQm4ITfsYYZhAr5kaHyBU2a6CpyASwHwuEWFXK+gIfTIo78EKt1LvsthQ/Wc8peDyQNUO1OWDynLYCofqO1AWdqj1iOxsVVyq4gE3nRjhEtvJLua+Y1T/roBK3yoQUgnhPzWJt77HE4Ry1Mq4U9D4QOfc1Uj09clxhBKYO9dDQqVcbgz359MpAE1UCN7NnnFBY/3M=
+  app: spring-book-store
   on:
     branch: main
