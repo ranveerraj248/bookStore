@@ -1,11 +1,12 @@
 language: java
 jdk:
   - openjdk17
-
+before_deploy:
+  - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.8.0
 deploy:
   provider: heroku
   api_key:
-    secure: "e1ee5158-a7eb-4f07-8386-3b390e6764ab"
+    secure: $HEROKU_TOKEN
   app:  "spring-book-store"
   on:
     branch: main
