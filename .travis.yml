@@ -5,7 +5,7 @@ jdk:
 deploy:
   provider: heroku
   api_key:
-    secure: $HEROKU_TOKEN
+    secure: "e1ee5158-a7eb-4f07-8386-3b390e6764ab"
   app:  "spring-book-store"
   on:
     branch: main
